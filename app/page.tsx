@@ -80,12 +80,14 @@ function Toggle({
 
 function Brand() {
   return (
-    <div className="app-brand" aria-label="GEONOS Infrastructure">
-      <span className="app-brand-mark" aria-hidden="true"><i /></span>
-      <span>
-        <strong>GEONOS</strong>
-        <small>INFRASTRUCTURE</small>
-      </span>
+    <div className="app-brand">
+      <img
+        className="app-brand-logo"
+        src="/LOGO.png"
+        alt="GEONOS"
+        width="499"
+        height="198"
+      />
     </div>
   );
 }

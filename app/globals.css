@@ -37,7 +37,7 @@ body {
     radial-gradient(circle at 86% 8%, rgba(35, 216, 243, 0.07), transparent 26rem),
     linear-gradient(180deg, #020b0f 0%, #041116 55%, #06161b 100%);
   color: var(--ink);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
   font-size: 16px;
   line-height: 1.5;
 }
@@ -3027,67 +3027,14 @@ footer > a {
 .app-brand {
   display: inline-flex;
   align-items: center;
-  gap: 11px;
 }
 
-.app-brand > span:last-child {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.05;
-}
-
-.app-brand strong {
-  font-size: 0.93rem;
-  letter-spacing: 0.34em;
-}
-
-.app-brand small {
-  margin-top: 4px;
-  color: var(--muted);
-  font-size: 0.47rem;
-  letter-spacing: 0.18em;
-}
-
-.app-brand-mark {
-  position: relative;
+.app-brand-logo {
   display: block;
-  width: 29px;
-  height: 29px;
-  border: 1.5px solid #dff7f9;
-  border-right-color: transparent;
-  border-radius: 50%;
-  transform: rotate(-12deg);
-}
-
-.app-brand-mark::before {
-  content: "";
-  position: absolute;
-  inset: 6px;
-  border: 1px solid var(--cyan);
-  border-left-color: transparent;
-  border-radius: 50%;
-}
-
-.app-brand-mark::after {
-  content: "";
-  position: absolute;
-  right: -2px;
-  bottom: 6px;
-  width: 12px;
-  height: 1.5px;
-  background: var(--green);
-  box-shadow: 0 0 9px var(--green);
-}
-
-.app-brand-mark i {
-  position: absolute;
-  top: 4px;
-  left: 12px;
-  width: 3px;
-  height: 3px;
-  border-radius: 50%;
-  background: var(--cyan);
-  box-shadow: 0 0 10px var(--cyan);
+  width: 184px;
+  height: 52px;
+  object-fit: cover;
+  object-position: center;
 }
 
 .app-mode-switch {
@@ -4217,6 +4164,146 @@ footer > a {
   display: none;
 }
 
+/* Readability scale: keep dense planning data legible without changing layout. */
+.app-mode-switch small,
+.app-header-actions a,
+.app-header-actions button,
+.app-casebar > div:first-child > span,
+.app-controls-head small,
+.app-decision-head span,
+.app-decision-head small,
+.app-control-title {
+  font-size: 0.64rem;
+}
+
+.app-mode-switch strong {
+  font-size: 0.9rem;
+}
+
+.app-casebar p,
+.app-range > span,
+.app-select > span,
+.app-toggle,
+.app-select select {
+  font-size: 0.72rem;
+}
+
+.app-evidence-anchor strong {
+  font-size: 0.9rem;
+}
+
+.app-evidence-anchor small {
+  font-size: 0.65rem;
+}
+
+.app-controls-head strong {
+  font-size: 0.84rem;
+}
+
+.app-controls-head button {
+  font-size: 0.66rem;
+}
+
+.app-segments button {
+  font-size: 0.7rem;
+}
+
+.app-climate-inline small {
+  font-size: 0.55rem;
+}
+
+.app-climate-inline strong {
+  font-size: 0.75rem;
+}
+
+.app-range strong {
+  font-size: 0.68rem;
+}
+
+.app-plan-meta span,
+.app-plan-meta small,
+.app-zone small,
+.app-heat-node small,
+.app-battery-node small,
+.app-grid-node small,
+.app-plan-scale {
+  font-size: 0.56rem;
+}
+
+.app-zone strong,
+.app-heat-node strong {
+  font-size: 0.76rem;
+}
+
+.app-zone span {
+  font-size: 0.6rem;
+}
+
+.app-battery-node strong {
+  font-size: 0.68rem;
+}
+
+.app-kpis small,
+.app-kpis span {
+  font-size: 0.6rem;
+}
+
+.app-kpis strong {
+  font-size: 1rem;
+}
+
+.app-decision-status > span {
+  font-size: 0.66rem;
+}
+
+.app-decision-status small,
+.app-scoreboard small,
+.app-recommendation small {
+  font-size: 0.56rem;
+}
+
+.app-decision-status strong {
+  font-size: 0.75rem;
+}
+
+.app-decision-copy {
+  font-size: 0.72rem;
+}
+
+.app-scoreboard strong {
+  font-size: 0.86rem;
+}
+
+.app-scoreboard span {
+  font-size: 0.62rem;
+}
+
+.app-recommendation p {
+  font-size: 0.68rem;
+}
+
+.app-decision-basis {
+  font-size: 0.58rem;
+}
+
+.app-monthly-title span,
+.app-boundary span {
+  font-size: 0.64rem;
+}
+
+.app-monthly-title small,
+.app-month > small {
+  font-size: 0.56rem;
+}
+
+.app-boundary p {
+  font-size: 0.68rem;
+}
+
+.app-footer {
+  font-size: 0.58rem;
+}
+
 @media (min-width: 1181px) and (min-height: 800px) {
   .app-shell {
     height: 100svh;
@@ -4294,7 +4381,12 @@ footer > a {
 
   .app-header-actions button {
     padding: 0 9px;
-    font-size: 0.48rem;
+    font-size: 0.64rem;
+  }
+
+  .app-brand-logo {
+    width: 158px;
+    height: 46px;
   }
 
   .app-mode-switch {
@@ -4358,7 +4450,7 @@ footer > a {
   }
 
   .app-zone strong {
-    font-size: 0.55rem;
+    font-size: 0.68rem;
   }
 
   .app-zone span {
