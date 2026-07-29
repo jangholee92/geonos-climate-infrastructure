@@ -3029,6 +3029,10 @@ footer > a {
   align-items: center;
 }
 
+.app-header > .app-brand {
+  margin-left: -8px;
+}
+
 .app-brand-logo {
   display: block;
   width: 127.5px;
