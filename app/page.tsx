@@ -83,7 +83,7 @@ function Brand() {
     <div className="app-brand">
       <img
         className="app-brand-logo"
-        src="/LOGO.png"
+        src="./LOGO.png"
         alt="GEONOS"
         width="499"
         height="198"
